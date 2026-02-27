@@ -1,3 +1,99 @@
+# 📡 ESP8266 WiFi Analyzer (Advanced Version)
+
+> A Production-Grade Offline WiFi Analysis Tool for ESP8266  
+> Real-Time Network Scanner • Channel Analyzer • OLED Monitor
+
+---
+
+![Platform](https://img.shields.io/badge/Platform-ESP8266-blue)
+![Type](https://img.shields.io/badge/Type-WiFi%20Analyzer-green)
+![License](https://img.shields.io/badge/License-MIT-orange)
+![Version](https://img.shields.io/badge/Version-1.0.0-red)
+
+---
+
+## 🚀 Overview
+
+**ESP8266 WiFi Analyzer** transforms your ESP8266 into a powerful offline network diagnostic tool.
+
+No internet required.  
+Just connect to the ESP Access Point and open the dashboard in your browser.
+
+This firmware provides:
+
+- 📡 Real-time WiFi network scanning
+- 📊 Signal strength (RSSI) visualization
+- 📶 Channel usage analysis (1–13)
+- 🧠 Automatic best channel suggestion
+- 📈 Animated signal bar dashboard
+- 📺 OLED live monitoring display
+- ⚡ Non-blocking background scan engine
+
+---
+
+## 🧠 How It Works
+
+1. ESP8266 starts in **Access Point mode**
+2. User connects to the device WiFi
+3. Open `192.168.4.1`
+4. Dashboard loads from **LittleFS**
+5. WiFi scan results are returned via JSON API
+6. OLED shows live network statistics
+
+---
+
+## 📂 Project Structure
+
+```
+
+ESP8266-WiFi-Analyzer/
+│
+├── WiFi_Analyzer.ino
+└── data/
+└── index.html
+
+```
+
+Only **2 files required**.
+
+---
+
+## 📊 Core Features
+
+### 📡 WiFi Network Scanner
+
+- SSID
+- RSSI (Signal Strength)
+- Signal Quality (%)
+- Channel
+- Encryption Type
+- BSSID (MAC Address)
+
+---
+
+### 📶 Channel Usage Analyzer
+
+- Counts networks per channel (1–13)
+- Displays usage bar chart
+- Suggests best available channel
+- Helps reduce WiFi interference
+
+---
+
+### 📈 Signal Quality Calculation
+
+Signal percentage calculated from RSSI:
+
+```
+
+If RSSI <= -100 → 0%
+If RSSI >= -50 → 100%
+Else → 2 × (RSSI + 100)
+
+```
+
+---
+
 ### 📺 OLED Display (128x64)
 
 Live display includes:
@@ -140,4 +236,3 @@ GitHub: https://github.com/codebanglailp
 ---
 
 ⭐ If you find this project useful, consider giving it a star!
-
