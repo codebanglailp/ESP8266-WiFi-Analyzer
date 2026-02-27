@@ -1,5 +1,3 @@
----
-
 ### 📺 OLED Display (128x64)
 
 Live display includes:
@@ -142,3 +140,4 @@ GitHub: https://github.com/codebanglailp
 ---
 
 ⭐ If you find this project useful, consider giving it a star!
+
